@@ -3,6 +3,7 @@
 - Create VPC using cli
      vpc-07da4b500f9a95ce4   
 ![preview](images/cli2.png)
+
    
 - create Pub and Pvt subnets
       pub==> subnet-04dc907c1e5ba327e
