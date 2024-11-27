@@ -133,12 +133,13 @@ Step 7: Set Up a Simple Web Application
    ```bash
    ssh -i your-key.pem ec2-user@your-instance-public-ip
    ```
-
+![preview](images/vpcigwtask2.png)
 2. **Install a Simple Web Server:**
    ```bash
    sudo yum update -y
    sudo yum install -y httpd
    ```
+   ![preview](images/vpcigwtask3.png)
 
 3. **Start the Web Server:**
    ```bash
@@ -150,10 +151,10 @@ Step 7: Set Up a Simple Web Application
    ```bash
    echo "<html><h1>Welcome to My VPC Web App!</h1></html>" | sudo tee /var/www/html/index.html
    ```
-
+![preview](images/vpcigwtask5.png)
 5. **Access Your Application:**
    - Open a web browser and navigate to `http://your-instance-public-ip`. You should see the welcome page.
-
+![preview](images/vpcigwtask4.png)
 Conclusion
 
 You've successfully created a real-time web application within a VPC, utilizing subnets, route tables, an Internet Gateway, and Network ACLs. This setup provides a solid understanding of AWS networking components and how they work together.
