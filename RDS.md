@@ -16,7 +16,6 @@ AWS - JAVA - RDS - Setup
 #Create a Database for the application config
 
 Step 1
-
 - Go to RDS
 - Create Database
 - DB - Mysql - Version-5.74
@@ -63,10 +62,6 @@ regdate date NOT NULL,
 PRIMARY KEY  (id) ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 #Once the DB is ready, This DB should be integrated with the code
-![preview](images/RDS14.png)
-![preview](images/RDS15.png)
-![preview](images/RDS16.png)
-![preview](images/RDS17.png)
 
 
 - CODE Deployment
@@ -75,12 +70,12 @@ PRIMARY KEY  (id) ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 - Create a Pub-Ec2 with SSH and 8080 ports
 - Connect to Ec2
-![preview](images/RDS18.png)
-!
+
+
 #Install git , Java , maven and tomcat
 
 - sudo yum -y install git
-[preview](images/RDS20.png)
+
 #Clone the code from github
 - git clone https://github.com/Ai-TechNov/aws-rds-java.git
 
@@ -128,7 +123,12 @@ Connection con = DriverManager.getConnection("jdbc:mysql://<update-database-end-
 - cd apache-tomcat-9.0.97
 - cd bin
 - ./startup.sh
-
+![preview](images/RDS14.png)
+![preview](images/RDS15.png)
+![preview](images/RDS16.png)
+![preview](images/RDS17.png)
+![preview](images/RDS18.png)
+![preview](images/RDS20.png)
 #This will start TC and TC will be running on port 8080.
 
 #Now, need to updated tomcat context.xml file
