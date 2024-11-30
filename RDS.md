@@ -40,6 +40,7 @@ Step 1
 ![preview](images/RDS12.png)
 
 #Connect to DB
+![preview](images/RDS21.png)
 - mysql -h <data-base-end-point> -u username -p password
 ![preview](images/RDS10.png)
 
@@ -129,6 +130,7 @@ Connection con = DriverManager.getConnection("jdbc:mysql://<update-database-end-
 ![preview](images/RDS17.png)
 ![preview](images/RDS18.png)
 ![preview](images/RDS20.png)
+
 #This will start TC and TC will be running on port 8080.
 
 #Now, need to updated tomcat context.xml file
