@@ -39,6 +39,18 @@ Create VPC with /16 range
 - The DB should be purely Pvt, and access should remian strictly to the admin !!
 
 - For the Above infra, i want load-balancing to be configured.
+![preview](images/pk8.png)
+![preview](images/pk9.png)
+![preview](images/pk10.png)
+![preview](images/pk11.png)
+![preview](images/pk12.png)
+![preview](images/pk13.png)
+![preview](images/pk15.png)
+![preview](images/pk16.png)
+![preview](images/pk17.png)
+![preview](images/pk18.png)
+![preview](images/pk19.png)
+
 - I want  Auto scaling for the 3 ec2's in order to avoid FT.
 - These instances should be monitored and notificaitons should be in place !!
 
