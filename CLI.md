@@ -15,23 +15,23 @@ Create VPC using cli
        pvt==>subnet-040773d6373797026
       
       - create IGW
+      aws ec2 create-internet-gateway
 ![preview](images/clitask4.png)
 - Attach IGW to VPC
-    aws ec2 attach-internet-gateway --internet-gateway-id igw-0eca198106314387e --vpc-id vpc-07da4b500f9a95ce4
+
+    aws ec2 attach-internet-gateway --vpc-id <vpc-id> --internet-gateway-id <igw-id>
 
 - Create Pub and PVT RT
-                 
+  aws ec2 create-route-table --vpc-id <vpc-id>
         
 - Attach Pub sub to Pub rt
-     
+   aws ec2 associate-route-table --route-table-id <public-rt-id> --subnet-id <public-subnet-id>  
 
 - Attach Pvt Sub to Pvt rt
 ![preview](images/clitask5.png)
-- Attach IGW to Pub RT
 
 
-- Create Sg for ssh // http
-sg-01c23eec36f8fda03
+- Create Sg for ssh
 Allow Http Access Port 22
 
 aws ec2 authorize-security-group-ingress --group-id sg-01c23eec36f8fda03 --protocol tcp --port 22 --cidr 0.0.0.0/0
@@ -45,9 +45,14 @@ aws ec2 run-instances --image-id ami-0dee22c13ea7a9a67  --instance-type t2.micro
 Ec2 Name Creation >aws ec2 create-tags --resources i-075b054106cc52520 --tags Key=Name,Value=MyC2Instance 
 - Create a Ec2 in Pvt Sub 
 ![preview](images/clitask6.png)
+aws ec2 authorize-security-group-ingress --group-id <sg-id> --protocol tcp --port 22 --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress --group-id <sg-id> --protocol tcp --port 80 --cidr 0.0.0.0/0
 
 - Create a Ec2 in Pvt Sub 
+aws ec2 create-security-group --group-name PrivateSG --description "Private SG" --vpc-id <vpc-id>
 >aws ec2 run-instances --image-id ami-0dee22c13ea7a9a67  --instance-type t2.micro --key-name demo --subnet-id subnet-040773d637379702
 6 --security-group-ids sg-01c23eec36f8fda03
+aws ec2 create-security-group --group-name PrivateSG --description "Private SG" --vpc-id <vpc-id>
+
 ![preview](images/clitask7.png)
 ![preview](images/clitask8.png)
