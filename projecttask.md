@@ -50,6 +50,12 @@ Create VPC with /16 range
 ![preview](images/pk17.png)
 ![preview](images/pk18.png)
 ![preview](images/pk19.png)
+![preview](images/pk20.png)
+![preview](images/pk21.png)
+![preview](images/pk22.png)
+![preview](images/pk23.png)
+![preview](images/pk24.jpg)
+![preview](images/pk25.jpg)
 
 - I want  Auto scaling for the 3 ec2's in order to avoid FT.
 - These instances should be monitored and notificaitons should be in place !!
@@ -58,5 +64,4 @@ Create VPC with /16 range
 
 - IF any users browses the CDN, it should reach to app, where the app should collect user info and store it to the DB.
 But, i want all the infra to be deployed in pvt-resources !! 
-ChatGPT said:
-ChatGPT
+
